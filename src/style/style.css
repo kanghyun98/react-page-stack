@@ -1,0 +1,139 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+div#root {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 3.5rem;
+  background-color: whitesmoke;
+}
+
+header > button {
+  width: 3.5rem;
+  height: 3.5rem;
+  outline: none;
+  border: none;
+  font-size: 1.7rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+header > span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, Violet, Orange);
+}
+
+main > h2 {
+  font-size: 2.5rem;
+}
+
+footer {
+  width: 100%;
+  height: 3.5rem;
+  background-color: whitesmoke;
+}
+
+footer > nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.linkItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  text-decoration: none;
+  color: gray;
+  font-size: 1.5rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.stack {
+  width: 100%;
+  height: 100%;
+}
+
+.next .slide-enter {
+  z-index: 1;
+  transform: translateX(100%);
+}
+
+.next .slide-enter-active {
+  transform: translateX(0);
+  transition: all 500ms;
+}
+
+.back .slide-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.back .slide-exit-active {
+  transform: translateX(100%);
+  transition: all 500ms;
+}
+
+.root {
+  transform: translateX(0);
+  /* transition: all 500ms; */
+}
+
+.notRoot {
+  transform: translateX(-30%);
+  transition: all 500ms;
+}
